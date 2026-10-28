@@ -1,0 +1,118 @@
+@import "tailwindcss";
+:root {
+  /* Identité visuelle Novabat */
+  --color-navy: #172b3a;
+  --color-navy-dark: #0d1c27;
+  --color-navy-light: #294354;
+
+  --color-gold: #c99a52;
+  --color-gold-light: #e2bd82;
+
+  --color-cream: #f7f5f0;
+  --color-white: #ffffff;
+  --color-text: #293944;
+  --color-muted: #75818a;
+  --color-border: #e5e1d8;
+
+  /* Espacements communs */
+  --container-width: 1440px;
+  --section-padding: clamp(72px, 9vw, 128px);
+  --page-gutter: clamp(22px, 7vw, 110px);
+
+  /* Finitions */
+  --transition: 220ms ease;
+  --shadow-soft: 0 16px 45px rgba(13, 28, 39, 0.08);
+  --shadow-card: 0 24px 60px rgba(13, 28, 39, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-white);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  color: var(--color-navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-navy-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
